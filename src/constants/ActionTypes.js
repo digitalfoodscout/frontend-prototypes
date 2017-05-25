@@ -4,3 +4,27 @@ export const EDIT_TODO = 'EDIT_TODO'
 export const COMPLETE_TODO = 'COMPLETE_TODO'
 export const COMPLETE_ALL = 'COMPLETE_ALL'
 export const CLEAR_COMPLETED = 'CLEAR_COMPLETED'
+
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const LOGIN_START = 'LOGIN_START'
+export const LOGIN_RESET = 'LOGIN_RESET'
+export const LOGIN_ERROR = 'LOGIN_ERROR'
+
+
+export const LOGOUT = 'LOGOUT'
+
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
+export const REGISTER_START = 'REGISTER_START'
+export const REGISTER_CANCEL = 'REGISTER_CANCEL'
+export const REGISTER_ERROR = 'REGISTER_ERROR'
+
+export const SYMPTOM_CREATE = 'SYMPTOM_CREATE'
+export const SYMPTOM_SAVE = 'SYMPTOM_SAVE'
+export const SYMPTOM_CANCEL = 'SYMPTOM_CANCEL'
+export const SYMPTOM_EDIT = 'SYMPTOM_EDIT'
+
+
+export const ENTRY_CREATE = 'ENTRY_CREATE'
+export const ENTRY_SAVE = 'ENTRY_SAVE'
+export const ENTRY_CANCEL = 'ENTRY_CANCEL'
+export const ENTRY_EDIT = 'ENTRY_EDIT'

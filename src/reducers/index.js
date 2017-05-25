@@ -1,8 +1,17 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
+import dashboard from './dashboard'
+import entry from './entry'
+import login from './login'
+import register from './register'
+import symptom from './symptom'
+
 
 const rootReducer = combineReducers({
-  todos
-})
+    dashboard,
+    entry,
+    login,
+    register,
+    symptom
+});
 
 export default rootReducer

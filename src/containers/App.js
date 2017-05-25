@@ -4,26 +4,21 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../components/Header'
 import MainSection from '../components/MainSection'
-import * as TodoActions from '../actions'
+import * as actions from '../actions'
 
-const App = ({todos, actions}) => (
+const App = ({nav, actions}) => (
   <div>
-    <Header addTodo={actions.addTodo} />
-    <MainSection todos={todos} actions={actions} />
+    <Header nav={nav} />
+    <MainSection actions={actions} />
   </div>
 )
 
-App.propTypes = {
-  todos: PropTypes.array.isRequired,
-  actions: PropTypes.object.isRequired
-}
-
 const mapStateToProps = state => ({
-  todos: state.todos
+  nav: state.nav
 })
 
 const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(TodoActions, dispatch)
+    actions: bindActionCreators(actions, dispatch)
 })
 
 export default connect(
