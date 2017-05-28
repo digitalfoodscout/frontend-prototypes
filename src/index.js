@@ -1,22 +1,41 @@
 import React from 'react'
-import { render } from 'react-dom'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
+import {render} from 'react-dom'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 import App from './containers/App'
-import reducer from './reducers'
 import 'todomvc-app-css/index.css'
 import './styles/dgfs_style.css'
 import {NAV_LOGIN} from './constants/NavigationStates'
-
+import {
+  HashRouter,
+  Route
+} from 'react-router-dom';
+import reducerLogin from './reducers/login';
 
 const initial_state = {
-    nav: NAV_LOGIN
+  nav: NAV_LOGIN
 };
-const store = createStore(reducer, initial_state);
+const store = createStore(reducerLogin, initial_state);
 console.log(store.getState());
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
+
+const About = () => (
+  <div>
+    <h2>About</h2>
+  </div>
 )
+
+const Root = ({store}) => (
+  <Provider store={store}>
+    <HashRouter>
+      <div>
+        <Route exact path="/" component={App}/>
+        <Route path="/about" component={About}/>
+      </div>
+    </HashRouter>
+  </Provider>
+);
+
+render(
+  <Root store={store}/>,
+  document.getElementById('root')
+);

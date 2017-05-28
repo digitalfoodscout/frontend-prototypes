@@ -7,7 +7,7 @@ export default class MainSection extends Component {
   }
 
   render() {
-    const { actions } = this.props
+    //const { actions } = this.props
     return (
       <section className="main">
       </section>
