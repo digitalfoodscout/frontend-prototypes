@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import App from './containers/App'
+import Login from './containers/Login'
 import 'todomvc-app-css/index.css'
 import './styles/dgfs_style.css'
 import {NAV_LOGIN} from './constants/NavigationStates'
@@ -29,6 +30,7 @@ const Root = ({store}) => (
     <HashRouter>
       <div>
         <Route exact path="/" component={App}/>
+        <Route path="/login" component={Login}/>
         <Route path="/about" component={About}/>
       </div>
     </HashRouter>
