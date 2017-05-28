@@ -12,9 +12,11 @@ import {
   Route
 } from 'react-router-dom';
 import reducerLogin from './reducers/login';
+import { user } from './constants/InitialStates';
 
 const initial_state = {
-  nav: NAV_LOGIN
+  nav: NAV_LOGIN,
+  user: user
 };
 const store = createStore(reducerLogin, initial_state);
 console.log(store.getState());
