@@ -1,22 +1,29 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
+import { Field, reduxForm } from 'redux-form';
 
-export default class LoginScreen extends Component {
-  static propTypes = {
-    actions: PropTypes.object.isRequired,
-    user: PropTypes.object.isRequired
-  }
-
+class Login extends Component {
   render() {
-    const { actions, user } = this.props;
-    console.log(this.props.user);
+    const { handleSubmit, reset} = this.props;
     return (
-      <section className="main">
-        <input type="text" placeholder="Benutzername" onChange={actions.enterUsername} value={user.username}/>
-        <input type="text" placeholder="Passwort" onChange={actions.enterPassword} value={user.password}/>
-        <button type="submit" onClick={actions.loginReset}>Zurücksetzen</button>
-        <button type="submit">Login</button>
-      </section>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Benutzername</label>
+        <Field name="username" component="input" type="text" placeholder="Benutzername"/>
+        <label htmlFor="password">Passwort</label>
+        <Field name="password" component="input" type="password" placeholder="Passwort"/>
+        <div>
+          <button type="reset" onClick={reset}>Zurücksetzen</button>
+          <button type="submit">Login</button>
+        </div>
+      </form>
     )
   }
 }
+
+
+// Decorate the form component
+const LoginScreen = reduxForm({
+  form: 'loginForm' // a unique name for this form
+})(Login);
+
+export default LoginScreen;

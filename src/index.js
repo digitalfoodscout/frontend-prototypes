@@ -1,24 +1,21 @@
 import React from 'react'
 import {render} from 'react-dom'
-import {createStore} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import App from './containers/App'
 import Login from './containers/Login'
 import 'todomvc-app-css/index.css'
 import './styles/dgfs_style.css'
-import {NAV_LOGIN} from './constants/NavigationStates'
 import {
   HashRouter,
   Route
 } from 'react-router-dom';
-import reducerLogin from './reducers/login';
-import { user } from './constants/InitialStates';
+import reducer from './reducers';
+import logger from 'redux-logger'
 
-const initial_state = {
-  nav: NAV_LOGIN,
-  user: user
-};
-const store = createStore(reducerLogin, initial_state);
+const store = createStore(reducer, applyMiddleware(
+  logger
+));
 console.log(store.getState());
 
 const About = () => (

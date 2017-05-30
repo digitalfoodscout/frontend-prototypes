@@ -8,6 +8,8 @@ export const completeAll = () => ({ type: types.COMPLETE_ALL })
 export const clearCompleted = () => ({ type: types.CLEAR_COMPLETED })
 /**/
 
-export const loginReset = () => ({ type: types.LOGIN_RESET });
-export const enterUsername = text => ({ type: types.ENTER_USERNAME, text });
-export const enterPassword = text => ({ type: types.ENTER_PASSWORD, text });
+export const submitLogin = (loginData) => {
+  console.log('Logging in with data' + loginData);
+  return { type: types.LOGIN_START };
+};
+

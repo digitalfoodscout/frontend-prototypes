@@ -9,7 +9,7 @@ import { NAV_LOGIN } from '../constants/NavigationStates';
 const Login = ({nav, title, user, actions}) => (
   <div>
     <Header nav={nav} title={title} />
-    <LoginScreen actions={actions} user={user}/>
+    <LoginScreen onSubmit={actions.submitLogin} user={user}/>
   </div>
 )
 
