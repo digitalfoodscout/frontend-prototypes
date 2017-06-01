@@ -11,8 +11,11 @@ import {
   Route
 } from 'react-router-dom';
 import reducer from './reducers';
-import logger from 'redux-logger'
+import logger from 'redux-logger';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+injectTapEventPlugin();
 const store = createStore(reducer, applyMiddleware(
   logger
 ));
@@ -25,15 +28,17 @@ const About = () => (
 )
 
 const Root = ({store}) => (
-  <Provider store={store}>
-    <HashRouter>
-      <div>
-        <Route exact path="/" component={App}/>
-        <Route path="/login" component={Login}/>
-        <Route path="/about" component={About}/>
-      </div>
-    </HashRouter>
-  </Provider>
+  <MuiThemeProvider>
+    <Provider store={store}>
+      <HashRouter>
+        <div>
+          <Route exact path="/" component={App}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/about" component={About}/>
+        </div>
+      </HashRouter>
+    </Provider>
+  </MuiThemeProvider>
 );
 
 render(

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends Component {
   render() {
@@ -12,7 +13,7 @@ class Login extends Component {
         <label htmlFor="password">Passwort</label>
         <Field name="password" component="input" type="password" placeholder="Passwort"/>
         <div>
-          <button type="reset" onClick={reset}>Zurücksetzen</button>
+          <RaisedButton label="Zurücksetzen" primary={true} onTouchTap={reset}/>
           <button type="submit">Login</button>
         </div>
       </form>
