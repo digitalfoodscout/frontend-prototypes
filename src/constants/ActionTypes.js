@@ -9,7 +9,8 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGIN_START = 'LOGIN_START'
 export const LOGIN_RESET = 'LOGIN_RESET'
 export const LOGIN_ERROR = 'LOGIN_ERROR'
-
+export const ENTER_PASSWORD = 'ENTER_PASSWORD'
+export const ENTER_USERNAME = 'ENTER_USERNAME'
 
 export const LOGOUT = 'LOGOUT'
 

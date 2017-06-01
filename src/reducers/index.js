@@ -4,6 +4,7 @@ import entry from './entry'
 import login from './login'
 import register from './register'
 import symptom from './symptom'
+import { reducer as formReducer } from 'redux-form'
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     entry,
     login,
     register,
-    symptom
+    symptom,
+    form: formReducer
 });
 
 export default rootReducer
