@@ -13,3 +13,8 @@ export const submitLogin = (loginData) => {
   return { type: types.LOGIN_START };
 };
 
+
+export const submitFoodDiaryEntry = (fdedata) => {
+  console.log('Saving food diaryentry' + fdedata);
+  return {type: types.ENTRY_CREATE};
+};
