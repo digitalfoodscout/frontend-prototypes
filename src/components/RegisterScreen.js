@@ -1,21 +1,65 @@
 import React, { Component } from 'react'
 //import PropTypes from 'prop-types'
 import { Field, reduxForm } from 'redux-form';
+import RaisedButton from 'material-ui/RaisedButton';
+import {green500, blue500} from 'material-ui/styles/colors';
+import {TextField} from 'redux-form-material-ui'
+
+const buttonStyle = {
+  margin: 12,
+};
+
+const textFieldStyle = {
+  margin: 12,
+  color: green500,
+};
+
+const underlineStyle = {
+  borderColor: green500,
+};
+const floatingLabelStyle = {
+  color: green500,
+};
+
+const floatingLabelFocusStyle = {
+  color: blue500,
+};
 
 class Register extends Component {
   render() {
     const { handleSubmit, reset} = this.props;
     return (
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Benutzername</label>
-        <Field name="username" component="input" type="text" placeholder="Benutzername"/>
-        <label htmlFor="password">Passwort</label>
-        <Field name="password" component="input" type="password" placeholder="Passwort"/>
-        <label htmlFor="password_confirm">Passwort Bestätigung</label>
-        <Field name="password_confirm" component="input" type="password" placeholder="Passwort Bestätigung"/>
+        <Field name="username" component={TextField}
+               floatingLabelText="Username"
+               style={textFieldStyle}
+               underlineStyle={underlineStyle}
+               floatingLabelStyle={floatingLabelStyle}
+               floatingLabelFocusStyle={floatingLabelFocusStyle}
+               floatingLabelFixed={true}
+        /><br />
+        <Field name="password" component={TextField}
+               floatingLabelText="Password"
+               style={textFieldStyle}
+               underlineStyle={underlineStyle}
+               floatingLabelStyle={floatingLabelStyle}
+               floatingLabelFocusStyle={floatingLabelFocusStyle}
+               floatingLabelFixed={true}
+               type="password"
+        /><br />
+        <Field name="passwordConfirm" component={TextField}
+               floatingLabelText="Password Confirm"
+               style={textFieldStyle}
+               underlineStyle={underlineStyle}
+               floatingLabelStyle={floatingLabelStyle}
+               floatingLabelFocusStyle={floatingLabelFocusStyle}
+               floatingLabelFixed={true}
+               type="password"
+        /><br />
+
         <div>
-          <button type="reset" onClick={reset}>Zurücksetzen</button>
-          <button type="submit">Login</button>
+          <RaisedButton label="Zurücksetzen" onTouchTap={reset} style={buttonStyle}/>
+          <RaisedButton label="Register" primary={true} style={buttonStyle}/>
         </div>
       </form>
     )
