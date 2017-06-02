@@ -59,7 +59,7 @@ class Register extends Component {
 
         <div>
           <RaisedButton label="Zurücksetzen" onTouchTap={reset} style={buttonStyle}/>
-          <RaisedButton label="Register" primary={true} style={buttonStyle}/>
+          <RaisedButton type="submit" label="Register" primary={true} style={buttonStyle}/>
         </div>
       </form>
     )
