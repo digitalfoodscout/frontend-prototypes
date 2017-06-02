@@ -75,7 +75,7 @@ class Symptom extends Component {
         <div>
           <RaisedButton label="Cancel" style={buttonStyle}/>
           <RaisedButton label="Reset" onTouchTap={reset} style={buttonStyle}/>
-          <RaisedButton label="Save" primary={true} style={buttonStyle}/>
+          <RaisedButton label="Save" type="submit" primary={true} style={buttonStyle}/>
         </div>
       </form>
     )
