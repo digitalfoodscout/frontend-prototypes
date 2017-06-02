@@ -13,8 +13,8 @@ class Login extends Component {
         <label htmlFor="password">Passwort</label>
         <Field name="password" component="input" type="password" placeholder="Passwort"/>
         <div>
-          <RaisedButton label="Zurücksetzen" primary={true} onTouchTap={reset}/>
-          <button type="submit">Login</button>
+          <RaisedButton type="reset" label="Zurücksetzen" primary={true} onTouchTap={reset}/>
+          <RaisedButton type="submit" label="Login" primary={true}/>
         </div>
       </form>
     )
