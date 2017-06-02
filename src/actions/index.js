@@ -13,3 +13,7 @@ export const submitLogin = (loginData) => {
   return { type: types.LOGIN_START };
 };
 
+export const submitRegister = (registerData) => {
+  console.log('Registering and logging in with data' + registerData);
+  return {type: types.REGISTER_START};
+};
