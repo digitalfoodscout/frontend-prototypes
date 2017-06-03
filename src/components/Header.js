@@ -5,7 +5,14 @@ import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import {withRouter} from 'react-router-dom';
 import LogoIcon from '../resources/svg/Logo';
+
+const MenuRoutingItem = withRouter(({history, label, route}) => {
+  return (
+    <MenuItem primaryText={label} onTouchTap={() => history.push(route)}/>
+  );
+});
 
 const Logged = (props) => (
   <IconMenu
@@ -16,8 +23,8 @@ const Logged = (props) => (
     targetOrigin={{horizontal: 'right', vertical: 'top'}}
     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
   >
-    <MenuItem primaryText="Settings"/>
-    <MenuItem primaryText="Logout"/>
+    <MenuRoutingItem label="Settings" route="/settings"/>
+    <MenuRoutingItem label="Logout" route="/login"/>
   </IconMenu>
 );
 
