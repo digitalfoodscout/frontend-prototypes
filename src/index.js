@@ -6,7 +6,7 @@ import App from './containers/App'
 import Login from './containers/Login'
 import 'todomvc-app-css/index.css'
 import './styles/dgfs_style.css'
-import {HashRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import reducer from './reducers';
 import logger from 'redux-logger';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -26,7 +26,7 @@ console.log(store.getState());
 const Root = ({store}) => (
   <MuiThemeProvider>
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <div>
           <Route exact path="/" component={Login}/>
           <Route path="/login" component={Login}/>
@@ -35,7 +35,7 @@ const Root = ({store}) => (
           <Route path="/fooddiaryentry" component={FoodDiaryEntry}/>
           <Route path="/symptom" component={Symptom}/>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>
   </MuiThemeProvider>
 );
