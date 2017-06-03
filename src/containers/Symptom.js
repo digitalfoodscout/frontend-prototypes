@@ -2,20 +2,20 @@ import React from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import Header from '../components/Header'
-import LoginScreen from '../components/LoginScreen'
+import SymptomScreen from '../components/SymptomScreen'
 import * as actions from '../actions'
-import {NAV_LOGIN} from '../constants/NavigationStates';
+import {NAV_SYMPTOM} from '../constants/NavigationStates';
 
-const Login = ({nav, title, user, actions}) => (
+const Symptom = ({nav, title, user, actions}) => (
   <div>
     <Header nav={nav} title={title}/>
-    <LoginScreen onSubmit={actions.submitLogin} user={user}/>
+    <SymptomScreen onSubmit={actions.submitSymptom} user={user}/>
   </div>
 );
 
 const mapStateToProps = state => ({
-  nav: NAV_LOGIN,
-  title: 'Login',
+  nav: NAV_SYMPTOM,
+  title: 'Symptom',
   user: state.user
 });
 
@@ -26,4 +26,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login)
+)(Symptom)

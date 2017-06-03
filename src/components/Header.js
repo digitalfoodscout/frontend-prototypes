@@ -23,7 +23,7 @@ const Logged = (props) => (
 );
 
 // rewritten as stateless functional component, see https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#stateless-functional-components
-export default function Header (props) {
+export default function Header(props) {
   const title = props.title ? props.title : "DigitalFoodScout";
   return (
   <AppBar
