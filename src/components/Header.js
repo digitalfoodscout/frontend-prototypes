@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import LogoImg from '../resources/img/logo_round.png';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
+import LogoIcon from '../resources/svg/Logo';
 
 const Logged = (props) => (
   <IconMenu
@@ -17,8 +16,8 @@ const Logged = (props) => (
     targetOrigin={{horizontal: 'right', vertical: 'top'}}
     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
   >
-    <MenuItem primaryText="Settings" />
-    <MenuItem primaryText="Logout" />
+    <MenuItem primaryText="Settings"/>
+    <MenuItem primaryText="Logout"/>
   </IconMenu>
 );
 
@@ -26,19 +25,13 @@ const Logged = (props) => (
 export default function Header(props) {
   const title = props.title ? props.title : "DigitalFoodScout";
   return (
-  <AppBar
-    title={<span>{title}</span>}
-    iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    iconElementRight={<Logged/>}
-  />
+    <AppBar
+      title={<span>{title}</span>}
+      iconElementLeft={<IconButton><LogoIcon /></IconButton>}
+      iconElementRight={<Logged/>}
+    />
   )
 }
-
-/**
- * <div style={{display: 'flex', justifyContent: 'center', padding: "8px"}}>
- <img src={LogoImg} style={{width: "50%", height: "50%"}} alt="Digital FoodScout Logo"/>
- </div>
- */
 
 Header.propTypes = {
   title: PropTypes.string
