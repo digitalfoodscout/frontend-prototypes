@@ -13,6 +13,10 @@ export const submitLogin = (loginData) => {
   return { type: types.LOGIN_START };
 };
 
+
+export const submitSymptom = (symptomData) => {
+  console.log('Submitting Symptom with data' + symptomData);
+  return {type: types.SYMPTOM_CREATE};
 export const submitRegister = (registerData) => {
   console.log('Registering and logging in with data' + registerData);
   return {type: types.REGISTER_START};
