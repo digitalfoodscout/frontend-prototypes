@@ -15,6 +15,7 @@ import logger from 'redux-logger';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Symptom from "./containers/Symptom";
+import Register from "./containers/Register";
 
 injectTapEventPlugin();
 const store = createStore(reducer, applyMiddleware(
@@ -35,6 +36,7 @@ const Root = ({store}) => (
         <div>
           <Route exact path="/" component={App}/>
           <Route path="/login" component={Login}/>
+          <Route path="/register" component={Register}/>
           <Route path="/about" component={About}/>
           <Route path="/symptom" component={Symptom}/>
         </div>
