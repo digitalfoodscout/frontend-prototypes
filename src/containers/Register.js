@@ -13,7 +13,7 @@ import {buttonStyle}  from '../components/FormFields';
 
 const Register = ({nav, title, user, actions}) => (
   <div>
-    <Header nav={nav} title={title}/>
+    <Header nav={nav} title={title} actions={actions}/>
     <RegisterScreen onSubmit={actions.submitRegister} user={user}/>
     <Divider/>
     <Link to="/login">

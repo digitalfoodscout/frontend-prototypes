@@ -24,18 +24,19 @@ const Logged = (props) => (
     anchorOrigin={{horizontal: 'right', vertical: 'top'}}
   >
     <MenuRoutingItem label="Settings" route="/settings"/>
-    <MenuRoutingItem label="Logout" route="/login"/>
+    <MenuItem primaryText="Logout" onTouchTap={props.logout}/>
   </IconMenu>
 );
 
 // rewritten as stateless functional component, see https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#stateless-functional-components
 export default function Header(props) {
+  const logout = props.actions.logout;
   const title = props.title ? props.title : "DigitalFoodScout";
   return (
     <AppBar
       title={<span>{title}</span>}
       iconElementLeft={<IconButton><LogoIcon /></IconButton>}
-      iconElementRight={<Logged/>}
+      iconElementRight={<Logged logout={logout}/>}
     />
   )
 }

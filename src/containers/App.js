@@ -7,7 +7,7 @@ import * as actions from '../actions'
 
 const App = ({nav, actions}) => (
   <div>
-    <Header nav={nav}/>
+    <Header nav={nav} actions={actions}/>
     <MainSection actions={actions}/>
   </div>
 );

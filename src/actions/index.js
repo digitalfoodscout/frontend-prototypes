@@ -8,6 +8,16 @@ export const submitLogin = (loginData) => {
   return {type: types.LOGIN_ERROR, error: 'Wrong credentials'};
 };
 
+export const logout = () => {
+  console.log('logout');
+  // logoutStatus is dependent on future HTTP call
+  const logoutStatus = true;
+  if(logoutStatus) {
+    return {type: types.LOGOUT_SUCCESS};
+  }
+  return {type: types.LOGOUT_ERROR, error: 'Could not log out'};
+};
+
 export const submitFoodDiaryEntry = (fdedata) => {
   console.log('Saving food diaryentry' + fdedata);
   return {type: types.ENTRY_CREATE};

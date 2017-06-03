@@ -12,7 +12,7 @@ const Login = ({nav, title, user, loggedIn, actions}) => {
   console.log(loggedIn);
   return (
     <div>
-      <Header nav={nav} title={title}/>
+      <Header nav={nav} title={title} actions={actions}/>
       <LoginScreen onSubmit={actions.submitLogin} user={user}/>
       <RegisterNote />
       {loggedIn === true ? <Redirect to='dashboard'/> : ''}
