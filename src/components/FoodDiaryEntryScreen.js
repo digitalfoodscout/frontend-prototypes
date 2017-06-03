@@ -96,7 +96,9 @@ class FoodDiaryEntry extends Component {
                  underlineStyle={underlineStyle}
                  floatingLabelStyle={floatingLabelStyle}
                  floatingLabelFocusStyle={floatingLabelFocusStyle}
-                 floatingLabelFixed={true}/>
+                 floatingLabelFixed={true}
+                 name="foodEntry1"
+          />
         </Chip>
         <Chip
           onRequestDelete={handleRequestDelete}
@@ -111,7 +113,9 @@ class FoodDiaryEntry extends Component {
                  underlineStyle={underlineStyle}
                  floatingLabelStyle={floatingLabelStyle}
                  floatingLabelFocusStyle={floatingLabelFocusStyle}
-                 floatingLabelFixed={true}/>
+                 floatingLabelFixed={true}
+                 name="foodEntry2"
+          />
         </Chip>
         <Chip
           onRequestDelete={handleRequestDelete}
@@ -126,7 +130,9 @@ class FoodDiaryEntry extends Component {
                  underlineStyle={underlineStyle}
                  floatingLabelStyle={floatingLabelStyle}
                  floatingLabelFocusStyle={floatingLabelFocusStyle}
-                 floatingLabelFixed={true}/>
+                 floatingLabelFixed={true}
+                 name="foodEntry3"
+          />
         </Chip>
         <Chip
           onRequestDelete={handleRequestDelete}
@@ -141,7 +147,9 @@ class FoodDiaryEntry extends Component {
                  underlineStyle={underlineStyle}
                  floatingLabelStyle={floatingLabelStyle}
                  floatingLabelFocusStyle={floatingLabelFocusStyle}
-                 floatingLabelFixed={true}/>
+                 floatingLabelFixed={true}
+                 name="foodEntry4"
+          />
         </Chip>
         <Chip
           onRequestDelete={handleRequestDelete}
@@ -156,13 +164,15 @@ class FoodDiaryEntry extends Component {
                  underlineStyle={underlineStyle}
                  floatingLabelStyle={floatingLabelStyle}
                  floatingLabelFocusStyle={floatingLabelFocusStyle}
-                 floatingLabelFixed={true}/>
+                 floatingLabelFixed={true}
+                 name="foodEntry5"
+          />
         </Chip>
 
         <div>
           <RaisedButton label="Cancel" style={buttonStyle}/>
           <RaisedButton label="Reset" onTouchTap={reset} style={buttonStyle}/>
-          <RaisedButton label="Save" primary={true} style={buttonStyle}/>
+          <RaisedButton label="Save" type="submit" primary={true} style={buttonStyle}/>
         </div>
       </form>
     )
