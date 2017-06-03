@@ -14,10 +14,15 @@ export const submitLogin = (loginData) => {
 };
 
 
-export const submitSymptom = (symptomData) => {
-  console.log('Submitting Symptom with data' + symptomData);
-  return {type: types.SYMPTOM_CREATE};
+export const submitFoodDiaryEntry = (fdedata) => {
+  console.log('Saving food diaryentry' + fdedata);
+  return {type: types.ENTRY_CREATE};
+};
 export const submitRegister = (registerData) => {
   console.log('Registering and logging in with data' + registerData);
   return {type: types.REGISTER_START};
+};
+export const submitSymptom = (symptomData) => {
+  console.log('Submitting Symptom with data' + symptomData);
+  return {type: types.SYMPTOM_CREATE};
 };
