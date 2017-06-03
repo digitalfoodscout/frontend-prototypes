@@ -1,25 +1,23 @@
-import React, {Component} from 'react'
-import {Field, reduxForm} from 'redux-form';
+import React from 'react';
+import {reduxForm} from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
+import {FormTextField, SubmitButton, buttonStyle} from '../components/FormFields';
 
-class Login extends Component {
-  render() {
-    const {handleSubmit, reset} = this.props;
-    return (
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Benutzername</label>
-        <Field name="username" component="input" type="text" placeholder="Benutzername"/>
-        <label htmlFor="password">Passwort</label>
-        <Field name="password" component="input" type="password" placeholder="Passwort"/>
-        <div>
-          <RaisedButton type="reset" label="Zurücksetzen" primary={true} onTouchTap={reset}/>
-          <RaisedButton type="submit" label="Login" primary={true}/>
-        </div>
-      </form>
-    )
-  }
-}
-
+const Login = (props) => {
+  const {handleSubmit, reset} = props;
+  return (
+    <form onSubmit={handleSubmit}>
+      <FormTextField name="username" label="Username"/>
+      <br />
+      <FormTextField name="password" label="Password" type="password"/>
+      <br />
+      <div>
+        <RaisedButton type="reset" label="Zurücksetzen" primary={true} onTouchTap={reset} style={buttonStyle}/>
+        <SubmitButton label="Login"/>
+      </div>
+    </form>
+  )
+};
 
 // Decorate the form component
 const LoginScreen = reduxForm({

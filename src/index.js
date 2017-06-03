@@ -28,8 +28,9 @@ const Root = ({store}) => (
     <Provider store={store}>
       <HashRouter>
         <div>
-          <Route exact path="/" component={App}/>
+          <Route exact path="/" component={Login}/>
           <Route path="/login" component={Login}/>
+          <Route path="/app" component={App}/>
           <Route path="/register" component={Register}/>
           <Route path="/fooddiaryentry" component={FoodDiaryEntry}/>
           <Route path="/symptom" component={Symptom}/>
