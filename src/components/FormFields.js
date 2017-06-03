@@ -5,7 +5,7 @@ import {TextField} from 'redux-form-material-ui'
 import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 
-export const buttonStyle = {
+const buttonStyle = {
   margin: 12,
 };
 
@@ -25,7 +25,7 @@ const floatingLabelFocusStyle = {
   color: blue500,
 };
 
-export const FormTextField = (props) => {
+const FormTextField = (props) => {
   const {name, label, type = 'text'} = props;
   return (
     <Field name={name} component={TextField}
@@ -44,20 +44,23 @@ FormTextField.propTypes = {
   label: PropTypes.string.isRequired
 };
 
-export const SubmitButton = (props) => {
+const SubmitButton = (props) => {
   const {label} = props;
   return (
     <RaisedButton type="submit" label={label} primary={true} style={buttonStyle}/>
   );
 };
-FormTextField.propTypes = {
+SubmitButton.propTypes = {
   label: PropTypes.string.isRequired
+};
+
+export {
+  FormTextField,
+  SubmitButton,
+  buttonStyle
 };
 
 export default {
   FormTextField,
-  SubmitButton,
-  styles: {
-    buttonStyle
-  }
+  SubmitButton
 };
