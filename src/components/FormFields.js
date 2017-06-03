@@ -26,10 +26,10 @@ const floatingLabelFocusStyle = {
 };
 
 export const FormTextField = (props) => {
-  const {name, labelText, type = 'text'} = props;
+  const {name, label, type = 'text'} = props;
   return (
     <Field name={name} component={TextField}
-           floatingLabelText={labelText}
+           floatingLabelText={label}
            style={textFieldStyle}
            underlineStyle={underlineStyle}
            floatingLabelStyle={floatingLabelStyle}
