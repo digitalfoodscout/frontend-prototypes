@@ -1,11 +1,9 @@
 import React, {Component} from "react";
-//import PropTypes from 'prop-types'
 import {Field, reduxForm} from "redux-form";
 import RaisedButton from "material-ui/RaisedButton";
 import {AutoComplete, DatePicker, TextField, TimePicker} from "redux-form-material-ui";
 import {blue500, green500} from "material-ui/styles/colors";
 import {AutoComplete as MUIAutoComplete} from "material-ui";
-
 import Avatar from "material-ui/Avatar";
 import Chip from "material-ui/Chip";
 import SvgIconFace from "material-ui/svg-icons/action/face";

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-//import PropTypes from 'prop-types'
 import {Field, reduxForm} from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
 import {DatePicker, TimePicker, AutoComplete, Slider} from 'redux-form-material-ui';

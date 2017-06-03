@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-//import PropTypes from 'prop-types'
-import { Field, reduxForm } from 'redux-form';
+import React, {Component} from 'react'
+import {Field, reduxForm} from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
 import {green500, blue500} from 'material-ui/styles/colors';
 import {TextField} from 'redux-form-material-ui'
@@ -27,7 +26,7 @@ const floatingLabelFocusStyle = {
 
 class Register extends Component {
   render() {
-    const { handleSubmit, reset} = this.props;
+    const {handleSubmit, reset} = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <Field name="username" component={TextField}

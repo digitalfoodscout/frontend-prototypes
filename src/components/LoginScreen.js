@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-//import PropTypes from 'prop-types'
-import { Field, reduxForm } from 'redux-form';
+import React, {Component} from 'react'
+import {Field, reduxForm} from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends Component {
   render() {
-    const { handleSubmit, reset} = this.props;
+    const {handleSubmit, reset} = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Benutzername</label>

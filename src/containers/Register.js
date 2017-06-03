@@ -1,14 +1,14 @@
 import React from 'react'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
 import Header from '../components/Header'
 import RegisterScreen from '../components/RegisterScreen'
 import * as actions from '../actions'
-import { NAV_REGISTER } from '../constants/NavigationStates';
+import {NAV_REGISTER} from '../constants/NavigationStates';
 
 const Register = ({nav, title, user, actions}) => (
   <div>
-    <Header nav={nav} title={title} />
+    <Header nav={nav} title={title}/>
     <RegisterScreen onSubmit={actions.submitRegister} user={user}/>
   </div>
 );
