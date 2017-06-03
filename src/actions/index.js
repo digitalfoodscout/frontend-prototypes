@@ -1,8 +1,11 @@
 import * as types from '../constants/ActionTypes'
 
 export const submitLogin = (loginData) => {
-  console.log('Logging in with data' + loginData);
-  return {type: types.LOGIN_START};
+  console.log('Logging in with data', loginData);
+  if(loginData.password === '1234') {
+    return {type: types.LOGIN_SUCCESS};
+  }
+  return {type: types.LOGIN_ERROR, error: 'Wrong credentials'};
 };
 
 export const submitFoodDiaryEntry = (fdedata) => {
