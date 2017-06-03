@@ -5,11 +5,13 @@ import Header from '../components/Header'
 import LoginScreen from '../components/LoginScreen'
 import * as actions from '../actions'
 import {NAV_LOGIN} from '../constants/NavigationStates';
+import {RegisterNote} from '../components/RegisterNote';
 
 const Login = ({nav, title, user, actions}) => (
   <div>
     <Header nav={nav} title={title}/>
     <LoginScreen onSubmit={actions.submitLogin} user={user}/>
+    <RegisterNote />
   </div>
 );
 
