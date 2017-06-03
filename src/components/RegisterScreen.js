@@ -1,70 +1,27 @@
-import React, {Component} from 'react'
-import {Field, reduxForm} from 'redux-form';
+import React, {Component} from 'react';
+import {reduxForm} from 'redux-form';
+import {FormTextField, SubmitButton, buttonStyle} from '../components/FormFields';
 import RaisedButton from 'material-ui/RaisedButton';
-import {green500, blue500} from 'material-ui/styles/colors';
-import {TextField} from 'redux-form-material-ui'
-
-const buttonStyle = {
-  margin: 12,
-};
-
-const textFieldStyle = {
-  margin: 12,
-  color: green500,
-};
-
-const underlineStyle = {
-  borderColor: green500,
-};
-const floatingLabelStyle = {
-  color: green500,
-};
-
-const floatingLabelFocusStyle = {
-  color: blue500,
-};
 
 class Register extends Component {
   render() {
     const {handleSubmit, reset} = this.props;
     return (
       <form onSubmit={handleSubmit}>
-        <Field name="username" component={TextField}
-               floatingLabelText="Username"
-               style={textFieldStyle}
-               underlineStyle={underlineStyle}
-               floatingLabelStyle={floatingLabelStyle}
-               floatingLabelFocusStyle={floatingLabelFocusStyle}
-               floatingLabelFixed={true}
-        /><br />
-        <Field name="password" component={TextField}
-               floatingLabelText="Password"
-               style={textFieldStyle}
-               underlineStyle={underlineStyle}
-               floatingLabelStyle={floatingLabelStyle}
-               floatingLabelFocusStyle={floatingLabelFocusStyle}
-               floatingLabelFixed={true}
-               type="password"
-        /><br />
-        <Field name="passwordConfirm" component={TextField}
-               floatingLabelText="Password Confirm"
-               style={textFieldStyle}
-               underlineStyle={underlineStyle}
-               floatingLabelStyle={floatingLabelStyle}
-               floatingLabelFocusStyle={floatingLabelFocusStyle}
-               floatingLabelFixed={true}
-               type="password"
-        /><br />
-
+        <FormTextField name="username" label="Username"/>
+        <br />
+        <FormTextField name="password" label="Password" type="password"/>
+        <br />
+        <FormTextField name="passwordConfirm" label="Password Confirm" type="password"/>
+        <br />
         <div>
           <RaisedButton label="Zurücksetzen" onTouchTap={reset} style={buttonStyle}/>
-          <RaisedButton type="submit" label="Register" primary={true} style={buttonStyle}/>
+          <SubmitButton label="Register"/>
         </div>
       </form>
     )
   }
 }
-
 
 // Decorate the form component
 const RegisterScreen = reduxForm({
