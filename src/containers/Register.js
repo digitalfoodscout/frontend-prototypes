@@ -1,17 +1,17 @@
 import React from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
 import Divider from 'material-ui/Divider';
 import * as actions from '../actions';
-import {NAV_REGISTER} from '../constants/NavigationStates';
+import { NAV_REGISTER } from '../constants/NavigationStates';
 import Header from '../components/Header';
 import RegisterScreen from '../components/RegisterScreen';
-import {buttonStyle}  from '../components/FormFields';
+import { buttonStyle } from '../components/FormFields';
 
 
-const Register = ({nav, title, user, actions}) => (
+const Register = ({ nav, title, user, actions }) => (
   <div>
     <Header nav={nav} title={title} actions={actions}/>
     <RegisterScreen onSubmit={actions.submitRegister} user={user}/>
@@ -35,4 +35,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Register)
+)(Register);

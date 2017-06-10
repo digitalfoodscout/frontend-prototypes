@@ -1,16 +1,16 @@
 import React from 'react';
-import {render} from 'react-dom';
-import {createStore, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import reducer from './reducers';
-import 'todomvc-app-css/index.css'
-import './styles/dgfs_style.css'
-import App from './containers/App'
-import Login from './containers/Login'
+import 'todomvc-app-css/index.css';
+import './styles/dgfs_style.css';
+import App from './containers/App';
+import Login from './containers/Login';
 import Dashboard from './containers/Dashboard';
 import Settings from './containers/Settings';
 import Symptom from "./containers/Symptom";
@@ -25,7 +25,7 @@ const store = createStore(reducer, applyMiddleware(
 ));
 console.log(store.getState());
 
-const Root = ({store}) => (
+const Root = ({ store }) => (
   <MuiThemeProvider>
     <Provider store={store}>
       <BrowserRouter>

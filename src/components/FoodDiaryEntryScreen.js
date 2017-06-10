@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import {Field, reduxForm} from "redux-form";
+import React, { Component } from "react";
+import { Field, reduxForm } from "redux-form";
 import RaisedButton from "material-ui/RaisedButton";
-import {AutoComplete, DatePicker, TextField, TimePicker} from "redux-form-material-ui";
-import {blue500, green500} from "material-ui/styles/colors";
-import {AutoComplete as MUIAutoComplete} from "material-ui";
+import { AutoComplete, DatePicker, TextField, TimePicker } from "redux-form-material-ui";
+import { blue500, green500 } from "material-ui/styles/colors";
+import { AutoComplete as MUIAutoComplete } from "material-ui";
 import Avatar from "material-ui/Avatar";
 import Chip from "material-ui/Chip";
 import SvgIconFace from "material-ui/svg-icons/action/face";
@@ -52,7 +52,7 @@ const floatingLabelFocusStyle = {
 
 class FoodDiaryEntry extends Component {
   render() {
-    const {handleSubmit, reset} = this.props;
+    const { handleSubmit, reset } = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <Field name="eventDate" component={DatePicker} format={null} style={pickerStyle}
@@ -173,7 +173,7 @@ class FoodDiaryEntry extends Component {
           <RaisedButton label="Save" type="submit" primary={true} style={buttonStyle}/>
         </div>
       </form>
-    )
+    );
   }
 }
 

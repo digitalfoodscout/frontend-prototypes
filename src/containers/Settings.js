@@ -1,13 +1,13 @@
 import React from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import Header from '../components/Header';
 import * as actions from '../actions';
-import {NAV_SETTINGS} from '../constants/NavigationStates';
+import { NAV_SETTINGS } from '../constants/NavigationStates';
 import MainSection from '../components/MainSection';
 import ProtectedPage from '../components/ProtectedPage';
 
-const Settings = ({nav, title, user, loggedIn, actions}) => (
+const Settings = ({ nav, title, user, loggedIn, actions }) => (
   <div>
     <Header nav={nav} title={title} actions={actions}/>
     <MainSection actions={actions}>
@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Settings)
+)(Settings);

@@ -1,7 +1,7 @@
-import React from 'react'
-import {Field} from 'redux-form';
-import {green500, blue500} from 'material-ui/styles/colors';
-import {TextField} from 'redux-form-material-ui'
+import React from 'react';
+import { Field } from 'redux-form';
+import { green500, blue500 } from 'material-ui/styles/colors';
+import { TextField } from 'redux-form-material-ui';
 import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 
@@ -25,8 +25,8 @@ const floatingLabelFocusStyle = {
   color: blue500,
 };
 
-const FormTextField = (props) => {
-  const {name, label, type = 'text'} = props;
+const FormTextField = props => {
+  const { name, label, type = 'text' } = props;
   return (
     <Field name={name} component={TextField}
            floatingLabelText={label}
@@ -44,8 +44,8 @@ FormTextField.propTypes = {
   label: PropTypes.string.isRequired
 };
 
-const SubmitButton = (props) => {
-  const {label} = props;
+const SubmitButton = props => {
+  const { label } = props;
   return (
     <RaisedButton type="submit" label={label} primary={true} style={buttonStyle}/>
   );

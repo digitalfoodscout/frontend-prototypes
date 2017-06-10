@@ -1,10 +1,9 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 
-export const RegisterNote = (props) => {
-  return (
+export const RegisterNote = () => (
     <Card>
       <CardHeader
         title="Noch nicht registriert?"
@@ -22,6 +21,5 @@ export const RegisterNote = (props) => {
       </CardActions>
     </Card>
   );
-};
 
 export default RegisterNote;

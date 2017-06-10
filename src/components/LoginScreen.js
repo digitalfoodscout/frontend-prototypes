@@ -1,10 +1,10 @@
 import React from 'react';
-import {reduxForm} from 'redux-form';
+import { reduxForm } from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
-import {FormTextField, SubmitButton, buttonStyle} from '../components/FormFields';
+import { FormTextField, SubmitButton, buttonStyle } from '../components/FormFields';
 
-const Login = (props) => {
-  const {handleSubmit, reset} = props;
+const Login = props => {
+  const { handleSubmit, reset } = props;
   return (
     <form onSubmit={handleSubmit}>
       <FormTextField name="username" label="Username"/>
@@ -16,7 +16,7 @@ const Login = (props) => {
         <SubmitButton label="Login"/>
       </div>
     </form>
-  )
+  );
 };
 
 // Decorate the form component

@@ -1,27 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import LogoIcon from '../resources/svg/Logo';
 
-const MenuRoutingItem = withRouter(({history, label, route}) => {
-  return (
+const MenuRoutingItem = withRouter(({ history, label, route }) => (
     <MenuItem primaryText={label} onTouchTap={() => history.push(route)}/>
-  );
-});
+  ));
 
-const Logged = (props) => (
+const Logged = props => (
   <IconMenu
     {...props}
     iconButtonElement={
       <IconButton><MoreVertIcon /></IconButton>
     }
-    targetOrigin={{horizontal: 'right', vertical: 'top'}}
-    anchorOrigin={{horizontal: 'right', vertical: 'top'}}
+    targetOrigin={{ horizontal: 'right', vertical: 'top' }}
+    anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
   >
     <MenuRoutingItem label="Settings" route="/settings"/>
     <MenuItem primaryText="Logout" onTouchTap={props.logout}/>
@@ -38,7 +36,7 @@ export default function Header(props) {
       iconElementLeft={<IconButton><LogoIcon /></IconButton>}
       iconElementRight={<Logged logout={logout}/>}
     />
-  )
+  );
 }
 
 Header.propTypes = {

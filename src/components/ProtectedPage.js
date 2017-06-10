@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {Redirect} from 'react-router-dom';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom';
 
-const ProtectedPage = (props) => {
-  const {loggedIn} = props;
+const ProtectedPage = props => {
+  const { loggedIn } = props;
   return loggedIn === false ? <Redirect to="login"/> : null;
 };
 ProtectedPage.propTypes = {

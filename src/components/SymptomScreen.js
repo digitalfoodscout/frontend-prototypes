@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {Field, reduxForm} from 'redux-form';
+import React, { Component } from 'react';
+import { Field, reduxForm } from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
-import {DatePicker, TimePicker, AutoComplete, Slider} from 'redux-form-material-ui';
-import {green500, blue500} from 'material-ui/styles/colors';
-import {AutoComplete as MUIAutoComplete} from 'material-ui';
+import { DatePicker, TimePicker, AutoComplete, Slider } from 'redux-form-material-ui';
+import { green500, blue500 } from 'material-ui/styles/colors';
+import { AutoComplete as MUIAutoComplete } from 'material-ui';
 
 
 const buttonStyle = {
@@ -32,7 +32,7 @@ const floatingLabelFocusStyle = {
 
 class Symptom extends Component {
   render() {
-    const {handleSubmit, reset} = this.props;
+    const { handleSubmit, reset } = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <Field name="eventDate" component={DatePicker} format={null} style={pickerStyle}
@@ -77,7 +77,7 @@ class Symptom extends Component {
           <RaisedButton label="Save" type="submit" primary={true} style={buttonStyle}/>
         </div>
       </form>
-    )
+    );
   }
 }
 

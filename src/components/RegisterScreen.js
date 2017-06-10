@@ -1,10 +1,10 @@
 import React from 'react';
-import {reduxForm} from 'redux-form';
+import { reduxForm } from 'redux-form';
 import RaisedButton from 'material-ui/RaisedButton';
-import {FormTextField, SubmitButton, buttonStyle} from '../components/FormFields';
+import { FormTextField, SubmitButton, buttonStyle } from '../components/FormFields';
 
-const Register = (props) => {
-  const {handleSubmit, reset} = props;
+const Register = props => {
+  const { handleSubmit, reset } = props;
   return (
     <form onSubmit={handleSubmit}>
       <FormTextField name="username" label="Username"/>
