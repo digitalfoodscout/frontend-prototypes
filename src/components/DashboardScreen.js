@@ -18,10 +18,8 @@ const FloatingActionButtonRoute = withRouter(({ history, route }) => (
 ));
 
 
-const DashboardScreen = props => {
-  const { actions } = props;
-  return (
-    <Paper>
+const DashboardScreen = () => (
+  <Paper>
       <Grid fluid>
         <Row>
           <Col xs={12} md>
@@ -80,8 +78,7 @@ const DashboardScreen = props => {
           </Col>
         </Row>
       </Grid>
-    </Paper>
-  );
-};
+  </Paper>
+);
 
 export default DashboardScreen;
