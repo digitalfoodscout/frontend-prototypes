@@ -7,7 +7,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { BrowserRouter, Route } from 'react-router-dom';
 import reducer from './reducers';
-import 'todomvc-app-css/index.css';
 import './styles/dgfs_style.css';
 import App from './containers/App';
 import Login from './containers/Login';
