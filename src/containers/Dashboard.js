@@ -4,14 +4,14 @@ import { connect } from 'react-redux';
 import Header from '../components/Header';
 import * as actions from '../actions';
 import { NAV_DASHBOARD } from '../constants/NavigationStates';
-import MainSection from '../components/MainSection';
+import DashboardScreen from '../components/DashboardScreen';
 import ProtectedPage from '../components/ProtectedPage';
 
 const Dashboard = ({ nav, title, loggedIn, actions }) => (
   <div>
     <Header nav={nav} title={title} actions={actions}/>
-    <MainSection actions={actions}>
-    </MainSection>
+    <DashboardScreen actions={actions}>
+    </DashboardScreen>
     <ProtectedPage loggedIn={loggedIn}/>
   </div>
 );
