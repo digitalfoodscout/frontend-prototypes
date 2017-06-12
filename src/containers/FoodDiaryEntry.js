@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import FoodDiaryEntryScreen from '../components/FoodDiaryEntryScreen';
 import * as actions from '../actions';
 import { NAV_ENTRY } from '../constants/NavigationStates';
-import ProtectedPage from '../components/ProtectedPage';
+import ProtectedPage from "../components/ProtectedPage";
 
 const FoodDiaryEntry = ({ nav, title, user, loggedIn, actions }) => (
   <div>
@@ -14,7 +14,6 @@ const FoodDiaryEntry = ({ nav, title, user, loggedIn, actions }) => (
     <ProtectedPage loggedIn={loggedIn} />
   </div>
 );
-
 const mapStateToProps = state => ({
   nav: NAV_ENTRY,
   title: 'FoodDiaryEntry',
