@@ -11,18 +11,15 @@ const FloatingActionButtonRoute = withRouter(({ history, route }) => (
 ));
 
 
-const DashboardScreen = props => {
-  const { actions } = props;
-  return (
-    <Paper>
-      <FloatingActionButtonRoute route="/fooddiaryentry">
-        <ContentAdd />
-      </FloatingActionButtonRoute>
-      <FloatingActionButtonRoute route="/symptom">
-        <ContentAdd />
-      </FloatingActionButtonRoute>
-    </Paper>
-  );
-};
+const DashboardScreen = () => (
+  <Paper>
+    <FloatingActionButtonRoute route="/fooddiaryentry">
+      <ContentAdd />
+    </FloatingActionButtonRoute>
+    <FloatingActionButtonRoute route="/symptom">
+      <ContentAdd />
+    </FloatingActionButtonRoute>
+  </Paper>
+);
 
 export default DashboardScreen;

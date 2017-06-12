@@ -9,8 +9,8 @@ import { withRouter } from 'react-router-dom';
 import LogoIcon from '../resources/svg/Logo';
 
 const MenuRoutingItem = withRouter(({ history, label, route }) => (
-    <MenuItem primaryText={label} onTouchTap={() => history.push(route)}/>
-  ));
+  <MenuItem primaryText={label} onTouchTap={() => history.push(route)}/>
+));
 
 const Logged = props => (
   <IconMenu

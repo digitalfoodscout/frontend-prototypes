@@ -14,7 +14,6 @@ const FoodDiaryEntry = ({ nav, title, user, loggedIn, actions }) => (
     <ProtectedPage loggedIn={loggedIn} />
   </div>
 );
-
 const mapStateToProps = state => ({
   nav: NAV_ENTRY,
   title: 'FoodDiaryEntry',
