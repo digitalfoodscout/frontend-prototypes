@@ -1,6 +1,3 @@
-/**
- * Created by Max on 12.06.2017.
- */
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 import { Slider } from "redux-form-material-ui";

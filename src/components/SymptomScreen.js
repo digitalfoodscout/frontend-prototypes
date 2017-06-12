@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { CancelResetSubmitBar, FormDateTimePicker } from "./FormFields.js";
-import "./SymptomPicker.js";
-import SymptomPicker from "./SymptomPicker";
+import './SymptomPicker.js';
+import SymptomPicker from './SymptomPicker';
 
 class Symptom extends Component {
   render() {
