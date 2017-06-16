@@ -19,7 +19,68 @@ import Register from "./containers/Register";
 // This is needed for correct tap events with material ui
 injectTapEventPlugin();
 
-const store = createStore(reducer, applyMiddleware(
+const initialState = {
+  meals: [
+    {
+      id: 1,
+      name: "Aal mit Küchenabfällen",
+      date: new Date('2017-04-11T10:20:30Z'),
+      contains: [
+        {
+          amount: 500,
+          food: {
+            id: 'BC200100',
+            name: 'Aal mit Küchenabfällen'
+          }
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Müsli und Kaffee",
+      date: new Date('2017-04-12T10:20:30Z'),
+      contains: [
+        {
+          amount: 100,
+          food: {
+            id: 'BC20001',
+            name: 'Kaffee'
+          }
+        },
+        {
+          amount: 300,
+          food: {
+            id: 'BC20003',
+            name: 'Müsli'
+          }
+        }
+      ]
+    },
+    {
+      id: 3,
+      name: "Pizza, Bier",
+      date: new Date('2017-04-12T20:00:30Z'),
+      contains: [
+        {
+          amount: 333,
+          food: {
+            id: 'BC20004',
+            name: 'Bier'
+          }
+        },
+        {
+          amount: 500,
+          food: {
+            id: 'BC20003',
+            name: 'Pizza'
+          }
+        }
+      ]
+    }
+  ]
+};
+
+const store = createStore(reducer, initialState, applyMiddleware(
   logger
 ));
 console.log(store.getState());

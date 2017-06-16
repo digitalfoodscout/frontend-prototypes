@@ -18,28 +18,31 @@ const FloatingActionButtonRoute = withRouter(({ history, route }) => (
 ));
 
 
-const DashboardScreen = () => (
+const DashboardScreen = ({ meals }) => {
+  const ListItemRoute = withRouter(({ history, route, primaryText, secondaryText, leftIcon }) => (
+    <ListItem
+      primaryText={primaryText}
+      secondaryText={secondaryText}
+      onTouchTap={() => history.push(route)}
+      leftIcon={leftIcon}
+    />
+  ));
+  return (
   <Paper>
       <Grid fluid>
         <Row>
           <Col xs={12} md>
             <List>
               <SubHeader>Mahlzeiten</SubHeader>
-              <ListItem
-                primaryText="Aal mit Küchenabfall (+ 2 weitere)"
-                secondaryText="10:12"
-                leftIcon={<FoodIcon/>}
-              />
-              <ListItem
-                primaryText="Gegarte Taube mit Küchenabfall"
-                secondaryText="10:20"
-                leftIcon={<FoodIcon/>}
-              />
-              <ListItem
-                primaryText="Irgendwas mit Küchenabfall"
-                secondaryText="10:30"
-                leftIcon={<FoodIcon/>}
-              />
+              {meals.map(meal =>
+                <ListItemRoute
+                  key={meal.id}
+                  primaryText={meal.name}
+                  secondaryText={meal.date.toString()}
+                  route={`/meals/edit/${meal.id}`}
+                  leftIcon={<FoodIcon/>}
+                />
+              )}
             </List>
             <Row>
               <Col xsOffset={10} xs={2}>
@@ -79,6 +82,7 @@ const DashboardScreen = () => (
         </Row>
       </Grid>
   </Paper>
-);
+  );
+};
 
 export default DashboardScreen;
