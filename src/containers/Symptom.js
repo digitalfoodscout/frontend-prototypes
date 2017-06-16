@@ -11,7 +11,7 @@ const Symptom = ({ nav, title, user, loggedIn, actions }) => (
   <div>
     <Header nav={nav} title={title} actions={actions}/>
     <SymptomScreen onSubmit={actions.submitSymptom} user={user}/>
-    <ProtectedPage loggedIn={loggedIn} />/
+    <ProtectedPage loggedIn={loggedIn} />
   </div>
 );
 
