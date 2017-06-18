@@ -2,6 +2,7 @@ import React from "react";
 import { Field } from "redux-form";
 import { blue500, green500 } from "material-ui/styles/colors";
 import { TextField, DatePicker, TimePicker, AutoComplete } from "redux-form-material-ui";
+import { withRouter } from 'react-router-dom';
 import RaisedButton from "material-ui/RaisedButton";
 import PropTypes from "prop-types";
 import { AutoComplete as MUIAutoComplete } from 'material-ui';
@@ -9,7 +10,6 @@ import { AutoComplete as MUIAutoComplete } from 'material-ui';
 const pickerStyle = {
   margin: 12,
 };
-
 
 const buttonStyle = {
   margin: 12,
@@ -23,6 +23,7 @@ const textFieldStyle = {
 const underlineStyle = {
   borderColor: green500,
 };
+
 const floatingLabelStyle = {
   color: green500,
 };
@@ -100,10 +101,13 @@ const ResetButton = props => {
 };
 
 const CancelResetSubmitBar = props => {
-  const { cancelLabel, resetLabel, submitLabel, cancelAction, reset } = props;
+  const { cancelLabel, resetLabel, submitLabel, reset } = props;
+  const BackButton = withRouter(({ history, label, }) => (
+    <RaisedButton label={label} onTouchTap={() => history.goBack()} style={buttonStyle}/>
+  ));
   return (
     <div>
-      <RaisedButton label={cancelLabel || "Cancel"} onTouchTap={cancelAction} style={buttonStyle}/>
+      <BackButton label={cancelLabel || "Cancel"}/>
       <ResetButton label={resetLabel} reset={reset}/>
       <SubmitButton label={submitLabel}/>
     </div>

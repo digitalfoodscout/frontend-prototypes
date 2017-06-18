@@ -3,3 +3,6 @@
   margin-top: 64px;
   color: rgba(132, 184, 24, 1) !important;
 }
+body {
+  margin: 0;
+}

@@ -14,7 +14,7 @@ class SymptomPickerScreen extends Component {
     const { reset } = this.props;
     return (
       <div>
-        <FormAutoComplete label = "Symptom?" name="Symptom" suggestions={['Bauchschmerzen', 'Kopfschmerzen', 'Übelkeit']} reset={reset}/>
+        <FormAutoComplete label="Symptom?" name="Symptom" suggestions={['Bauchschmerzen', 'Kopfschmerzen', 'Übelkeit']} reset={reset}/>
         <br/>
         <div style={textFieldStyle}>Intensity?</div>
         <Field
