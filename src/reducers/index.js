@@ -3,7 +3,7 @@ import dashboard from './dashboard';
 import meals from './meal';
 import login from './login';
 import register from './register';
-import symptom from './symptom';
+import symptoms from './symptom';
 import { reducer as formReducer } from 'redux-form';
 
 const rootReducer = combineReducers({
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
   meals,
   login,
   register,
-  symptom,
+  symptoms,
   form: formReducer
 });
 

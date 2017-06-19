@@ -77,6 +77,26 @@ const initialState = {
         }
       ]
     }
+  ],
+  symptoms: [
+    {
+      id: 1,
+      name: "Bauchschmerzen",
+      date: new Date('2017-04-11T10:20:30Z'),
+      intensity: 1
+    },
+    {
+      id: 2,
+      name: "Kopfschmerzen",
+      date: new Date('2017-04-11T10:20:30Z'),
+      intensity: 2
+    },
+    {
+      id: 3,
+      name: "Schläfrigkeit",
+      date: new Date('2017-04-11T10:20:30Z'),
+      intensity: 0
+    }
   ]
 };
 

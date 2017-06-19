@@ -1,4 +1,4 @@
-import * as types from '../constants/ActionTypes';
+import * as types from "../constants/ActionTypes";
 
 export const submitLogin = loginData => {
   console.log('Logging in with data', loginData);
@@ -19,16 +19,16 @@ export const logout = () => {
 };
 
 export const submitFoodDiaryEntry = fdedata => {
-  console.log(`Saving food diaryentry${fdedata}`);
-  return { type: types.ENTRY_CREATE };
+  console.log(`Saving food diaryentry`);
+  return { type: types.ENTRY_SAVE, payload: fdedata };
 };
 
-export const submitRegister = registerData => {
-  console.log(`Registering and logging in with data${registerData}`);
+export const submitRegister = () => {
+  console.log(`Registering and logging in with data`);
   return { type: types.REGISTER_START };
 };
 
-export const submitSymptom = symptomData => {
-  console.log(`Submitting Symptom with data${symptomData}`);
-  return { type: types.SYMPTOM_CREATE };
+export const submitSymptom = symptomdata => {
+  console.log(`Submitting Symptom with data`);
+  return { type: types.SYMPTOM_SAVE, payload: symptomdata };
 };

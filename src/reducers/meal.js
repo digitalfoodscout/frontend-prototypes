@@ -1,13 +1,12 @@
 import { ENTRY_SAVE, ENTRY_CANCEL } from '../constants/ActionTypes';
-import { NAV_DASHBOARD } from '../constants/NavigationStates';
 
 
 export default function entry(state = { meals: [] }, action) {
   switch (action.type) {
     case ENTRY_SAVE:
+      console.log(action.payload);
       // TODO pass parameters to dashboard page
-      return { ...state, nav: NAV_DASHBOARD, meals: [
-        ...state.meals,
+      return [...state,
         {
           id: 999,
           name: "Aal mit Küchenabfällen",
@@ -22,8 +21,7 @@ export default function entry(state = { meals: [] }, action) {
             }
           ]
         }
-      ]
-      };
+      ];
     case ENTRY_CANCEL:
       return state;
     default:

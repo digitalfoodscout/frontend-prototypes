@@ -133,10 +133,6 @@ const FormAutoComplete = props => {
   );
 };
 
-SubmitButton.propTypes = {
-  label: PropTypes.string.isRequired
-};
-
 export {
   FormTextField,
   SubmitButton,

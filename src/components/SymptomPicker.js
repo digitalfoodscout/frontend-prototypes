@@ -26,7 +26,6 @@ class SymptomPickerScreen extends Component {
           format={null}
           step={1}
           style={textFieldStyle}
-          reset={reset}
         />
       </div>
     );
